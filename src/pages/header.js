@@ -83,7 +83,7 @@ const Header = () => {
                   </li>
 
                   <li>
-                    <a className='logout' onClick={handleLogout}>
+                    <a href='/logout' className='logout' onClick={handleLogout}>
                       Logout
                     </a>
                   </li>
@@ -100,7 +100,7 @@ const Header = () => {
                     <a href='/memberProfile'>Profile</a>
                   </li>
                   <li>
-                    <a className='logout' onClick={handleLogout}>
+                    <a href='/logout' className='logout' onClick={handleLogout}>
                       Logout
                     </a>
                   </li>
@@ -114,7 +114,7 @@ const Header = () => {
                     <a href='/partnerProfile'>Profile</a>
                   </li>
                   <li>
-                    <a className='logout' onClick={handleLogout}>
+                    <a href='/logout' className='logout' onClick={handleLogout}>
                       Logout
                     </a>
                   </li>
@@ -131,7 +131,7 @@ const Header = () => {
                     <a href='/volunteerProfile'>Profile</a>
                   </li>
                   <li>
-                    <a className='logout' onClick={handleLogout}>
+                    <a href='/logout' className='logout' onClick={handleLogout}>
                       Logout
                     </a>
                   </li>
