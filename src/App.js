@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import React, { Component, useState, useEffect } from "react";
+import React, { Component } from "react";
 
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
@@ -22,7 +22,7 @@ import MealUpload from "./pages/MealUpload/MealUpload";
 import Caregiver from "./pages/Caregiver/Caregiver";
 import RetrieveOrder from "./pages/Order/RetrieveOrder";
 import TermsAndConditions from "./pages/Terms/TermsAndConditions ";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
