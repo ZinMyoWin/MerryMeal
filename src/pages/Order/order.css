@@ -1,0 +1,63 @@
+.order-container {
+    margin-bottom: 2rem;
+    width: 800px;
+    margin: 2rem auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+
+  .order-container h1{
+    text-align: center;
+  }
+  
+  .order-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .order-input {
+    width: 97%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  
+  .order-btn {
+    background-color: #ffffff;
+    margin-top: 1.5rem;
+    font-weight: bold;
+    color: #ff4500;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 2px solid#ff4500;
+    border-radius: 30px 0px 30px 0px;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+  }
+  
+  .order-btn:hover {
+    background-color: #ff4500;
+    color: white;
+    box-shadow: 0 0 5px #ff4500,
+                0 0 25px #ff4500,
+                0 0 50px #ff4500,
+                0 0 200px #ff4500;
+  }
+
+  .order-select {
+    font-size: 16px;
+    padding: 9px;
+    border: 1px solid #ccc;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .order-select:focus{
+    border: 1px solid black;
+  }

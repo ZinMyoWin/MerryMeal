@@ -1,0 +1,172 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  font-family: "Black Ops One", cursive;
+  font-family: "Satisfy", cursive;
+  background-color: #ff4500;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 90%;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  /* padding: 0 20px; */
+}
+
+.logo {
+  display: flex;
+
+  width: 40%;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  left: 0;
+  justify-content: flex-start;
+}
+
+.logo a {
+  text-decoration: none;
+  color: white;
+  transition: 0.5s ease-in-out;
+}
+
+/* .logo a:hover {
+  color: rgb(109, 0, 0);
+} */
+.toggleContainer {
+  display: flex;
+  width: 50%;
+  margin-right: 4%;
+}
+.menu-toggle {
+margin-left: 80%;
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  border-radius: 2px;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap:nowrap;
+  /* align-items: center; */
+  /* text-align: center; */
+  /* margin: 0; */
+  /* padding: 0; */
+  width:auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  gap: 15px;
+}
+
+
+
+.nav-links li {
+  /* margin-right: 20px; */
+  /* margin-bottom: 10px; */
+  width:max-content;
+  transition: 0.5s ease-in-out;
+}
+
+.nav-links li:hover {
+  color: #fff;
+
+}
+
+.nav-links li a:hover {
+  border-radius: 20px;
+  background-color: #ffffff;
+  padding:10px;
+  color:#ff4500;
+}
+
+.nav-links li a {
+  transition: 0.5s ease-in-out;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.nav-links-mobile a {
+  transition: 0.5s ease-in-out;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.logout {
+  cursor: pointer;
+}
+
+.right-menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bar.active:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .bar.active:nth-child(2) {
+    opacity: 0;
+  }
+
+  .bar.active:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+    
+  .nav-links-mobile {
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    list-style-type: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #ff4500;
+    padding: 10%;
+    text-align: center;
+    border: 2px solid #eebaba;
+    border-radius: 10px;
+    z-index: 3;
+    width: 40%;
+    height: 80vh;
+    top: 65px;
+    left: 0;
+    position: fixed;
+  }
+
+  .nav-links-mobile-wrapper {
+
+  }
+}

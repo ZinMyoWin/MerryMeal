@@ -1,0 +1,44 @@
+.ad-user-container {
+    background-color: #f5f5f5;
+    padding: 20px;
+  }
+  .ad-user-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    margin: 20px 0;
+    padding: 20px;
+  }
+  .ad-meal-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    margin: 20px 0;
+    padding: 20px;
+  }
+  
+  .ad-user-item img {
+    max-width: 200px;
+    max-height: 200px;
+    margin-right: 20px;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  
+  .ad-user-details {
+    flex: 1;
+    text-align: left;
+  }
+
+  .adu-h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .ad-user-details p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 8px;
+  }

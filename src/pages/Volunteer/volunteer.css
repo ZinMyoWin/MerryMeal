@@ -1,0 +1,85 @@
+.volun-registration-bg {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.volun-registration-form {
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  width: 800px;
+}
+
+.volun-registration-form h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.vol-label {
+  display: block;
+  font-size: 16px;
+  color: #333;
+}
+
+.vol-input {
+  width: 97%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ff4500;
+  border-radius: 5px;
+  transition: .3s ease-in-out;
+}
+
+.vol-input:focus {
+  outline: none;
+  border-color: #007BFF;
+  box-shadow: 0 0 5px #ff4500;
+}
+
+
+.volunteer-btn {
+  font-weight: bold;
+  color: #ff4500;
+  border: 2px solid #ff4500;
+  border-radius: 25px 5px 25px 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.vol-file {
+  display: block;
+  width: 97%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ff4500;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  color: #333;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.vol-file:focus {
+  outline: none;
+  border-color: #007BFF;
+  box-shadow: 0 0 5px #ff4500;
+}
+
+.volunteer-btn:hover {
+  background-color: #ff4500;
+  color: white;
+  box-shadow: 0 0 5px #ff4500,
+              0 0 25px #ff4500,
+              0 0 50px #ff4500,
+              0 0 200px #ff4500;
+}

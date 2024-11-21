@@ -1,0 +1,74 @@
+.mu-container {
+  border: 1px solid #e1e1e1;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 800px;
+    margin: 2rem auto;
+    margin-bottom: 2rem;
+  }
+  
+  .mu-container h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .mu-label {
+    margin-left: 30px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  .mu-input {
+    margin-left: 30px;
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .mu-input:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 5px #ff4500;
+  }
+  
+  .mu-input[type="file"] {
+    margin-left: 30px;
+    width: 90%;
+    padding: 10px;
+    border: none;
+    background: #ff4500;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .mu-btn {
+    margin-left: 30px;
+    background-color: #fff;
+    font-weight: bold;
+    color: #ff4500;
+    border: 2px solid #ff4500;
+    border-radius: 25px 5px 25px 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .mu-btn:hover {
+    background-color: #ff4500;
+    color: white;
+    box-shadow: 0 0 5px #ff4500,
+                0 0 25px #ff4500,
+                0 0 50px #ff4500,
+                0 0 200px #ff4500;
+  }
