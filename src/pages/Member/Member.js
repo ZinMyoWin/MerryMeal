@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './member.css'
-import Alert from 'react-s-alert';
+import { toast } from "react-toastify";
 
 class Member extends Component {
   constructor(props) {
@@ -30,11 +30,11 @@ class Member extends Component {
 
     const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
     if (!emailRegex.test(email)) {
-      Alert.error('Invalid email address');
+      toast.error('Invalid email address');
       return;
     }
     if (password.length < 6 || password.length > 20) {
-      Alert.error('Password must be 6 to 20 characters');
+      toast.error('Password must be 6 to 20 characters');
       return;
     }
 
@@ -46,10 +46,10 @@ class Member extends Component {
 
     axios.post('http://localhost:8080/logic/memberReg', formData)
       .then((response) => {
-        Alert.success('Registration successful. Please wait for admin approval.')
+        toast.success('Registration successful. Please wait for admin approval.')
       })
       .catch((error) => {
-        Alert.error(`${error.response.data.message}`)
+        toast.error(`${error.response.data.message}`)
       });
   }
 

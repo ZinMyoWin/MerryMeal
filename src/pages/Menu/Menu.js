@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './menu.css';
 import Service from '../Service';
-import Alert from 'react-s-alert';
+import { toast } from "react-toastify";
 
 
 class Menu extends Component {
@@ -27,10 +27,10 @@ class Menu extends Component {
     .then((response) => {
       const responseData = response.data
       const dayNeed = responseData.dayNeed
-      Alert.success(`Request has been posted`);
+      toast.success(`Request has been posted`);
     }).catch((error) => {
       console.error("Error:", error);
-      Alert.error("Request failed. Please try again.");
+      toast.error("Request failed. Please try again.");
     })
   }
 

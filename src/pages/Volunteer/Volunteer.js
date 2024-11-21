@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './volunteer.css';
-import Alert from 'react-s-alert';
+import { toast } from "react-toastify";
 import axios from 'axios';
 
 class Volunteer extends Component {
@@ -34,10 +34,10 @@ class Volunteer extends Component {
 
     axios.post('http://localhost:8080/logic/volunteerReg', formData)
       .then((response) => {
-        Alert.success('Registration successful. Please wait for admin approval.')
+        toast.success('Registration successful. Please wait for admin approval.')
       })
       .catch((error) => {
-        Alert.error(`${error.response.data.message}`)
+        toast.error(`${error.response.data.message}`)
       });
   }
 

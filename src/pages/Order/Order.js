@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './order.css'
-import Alert from 'react-s-alert';
+import { toast } from "react-toastify";
 
 class Order extends Component {
   constructor() {
@@ -33,7 +33,7 @@ class Order extends Component {
     const { mealId, day, userLatitude, userLongitude } = this.state;
 
     const authToken = localStorage.getItem('token')
-    // Alert.success('Order placed Successfully')
+    // toast.success('Order placed Successfully')
 
     fetch('http://localhost:8080/logic/' + mealId, {
       method: 'POST',
@@ -51,11 +51,11 @@ class Order extends Component {
     .then((response) => response.json())
     .then((data) => {
       if(data.message){
-        Alert.success(data.message)
+        toast.success(data.message)
       }
     })
     .catch((error) => {
-      Alert.error('Error', error)
+      toast.error('Error', error)
     })
   };
 

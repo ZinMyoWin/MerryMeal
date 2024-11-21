@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Service from '../Service'
-import Alert from 'react-s-alert'
+import { toast } from "react-toastify";
 
 class RetrieveOrder extends Component {
 
@@ -35,26 +35,26 @@ class RetrieveOrder extends Component {
   takeOrder = (orderId) => {
     Service.takeOrder(orderId)
     .then((response) => {
-      Alert.success('You have successfully took the Order')
+      toast.success('You have successfully took the Order')
       setTimeout(() => {
         window.location.reload();
       }, 1000);
     })
     .catch((error) => {
-      Alert.error('Error taking Order')
+      toast.error('Error taking Order')
     })
   }
 
   finishOrder = (orderId) => {
     Service.finishOrder(orderId)
     .then((response) => {
-      Alert.success('Order Delivered')
+      toast.success('Order Delivered')
       setTimeout(() => {
         window.location.reload();
       }, 1000);
     })
     .catch((error) => {
-      Alert.error('Error Delivering Order')
+      toast.error('Error Delivering Order')
     })
   }
 

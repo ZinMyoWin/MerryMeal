@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './header.css';
-import Alert from 'react-s-alert';
+import { toast } from "react-toastify";
 
 const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -17,7 +17,7 @@ const Header = () => {
     localStorage.removeItem('token');
     localStorage.setItem('hasLoggedOut',"LoggedOut")
     setIsLoggedIn(false);
-    Alert.success('You have successfully logged out');
+    toast.success('You have successfully logged out');
     window.location.href = "/";
   };
   

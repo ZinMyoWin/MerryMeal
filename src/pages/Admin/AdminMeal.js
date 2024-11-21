@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Service from '../Service';
-import Alert from 'react-s-alert'
+import { toast } from "react-toastify";
 import './adminMeal.css'
 
 export class AdminMeal extends Component {
@@ -22,13 +22,13 @@ export class AdminMeal extends Component {
   handleApprove = (id) => {
     Service.approveMeals(id)
       .then((response) => {
-        Alert.success('Meal Approved', response.data);
+        toast.success('Meal Approved', response.data);
         setTimeout(() => {
           window.location.reload();
         }, 1000);
       })
       .catch((error) => {
-        Alert.error('Error Approving Meal', error);
+        toast.error('Error Approving Meal', error);
         setTimeout(() => {
           window.location.reload();
         }, 1000);
@@ -38,13 +38,13 @@ export class AdminMeal extends Component {
   handleReject = (id) => {
     Service.rejectMeals(id)
       .then((response) => {
-        Alert.success('Meal Rejected', response.data);
+        toast.success('Meal Rejected', response.data);
         setTimeout(() => {
           window.location.reload();
         }, 1000);
       })
       .catch((error) => {
-        Alert.error('Error Rejecting Meal', error);
+        toast.error('Error Rejecting Meal', error);
         setTimeout(() => {
           window.location.reload();
         }, 1000);

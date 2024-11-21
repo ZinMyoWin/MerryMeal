@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './partner.css';
-import Alert from 'react-s-alert';
+import { toast } from "react-toastify";
 import axios from 'axios';
 
 class Partner extends Component {
@@ -20,7 +20,7 @@ class Partner extends Component {
     if(navigator.geolocation){
       navigator.geolocation.getCurrentPosition(this.handleGeolocationSuccess, this.handelGeolocationError)
     }else{
-      Alert.error('Geolocation is not suppoerted by your browser')
+      toast.error('Geolocation is not suppoerted by your browser')
     }
   }
 
@@ -30,7 +30,7 @@ class Partner extends Component {
   }
 
   handelGeolocationError = (error) => {
-    Alert.error('Failed to obtain your location. Please enter latitude and longitude manually.')
+    toast.error('Failed to obtain your location. Please enter latitude and longitude manually.')
   }
   
   handleInputChange = (event) => {
@@ -55,10 +55,10 @@ class Partner extends Component {
 
     axios.post('http://localhost:8080/logic/partnerReg', formData)
       .then((response) => {
-        Alert.success('Registration successful. Please wait for admin approval.');
+        toast.success('Registration successful. Please wait for admin approval.');
       })
       .catch((error) => {
-        Alert.error(`${error.response.data.message}`)
+        toast.error(`${error.response.data.message}`)
       });
   }
 
