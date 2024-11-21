@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './contact.css'; 
 import axios from 'axios';
-import Alert from 'react-s-alert';
+import { toast } from "react-toastify";
 
 export class Contact extends Component {
   constructor(props){
@@ -27,10 +27,10 @@ export class Contact extends Component {
     
     axios.post('http://localhost:8080/logic/contactUs', formData)
       .then((response) => {
-        Alert.success('Form Submitted Successfully')
+        toast.success('Form Submitted Successfully')
       })
       .catch((error) => {
-        Alert.error(error)
+        toast.error(error)
       });
   }
   render() {

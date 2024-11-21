@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Service from '../Service'
-import Alert from 'react-s-alert'
+import { toast } from "react-toastify";
 import './caregiver.css'
 
 class Caregiver extends Component {
@@ -36,26 +36,26 @@ class Caregiver extends Component {
   takeCareRequest = (request_id) => {
     Service.takeCareRequest(request_id)
     .then((response) => {
-      Alert.success('You have successfully took the request')
+      toast.success('You have successfully took the request')
       setTimeout(() => {
         window.location.reload();
       }, 1000);
     })
     .catch((error) => {
-      Alert.error('Error taking Request')
+      toast.error('Error taking Request')
     })
   }
 
   finishCareRequest = (request_id) =>{
     Service.finishCareRequest(request_id)
     .then((response) => {
-      Alert.success('Care Request Finished')
+      toast.success('Care Request Finished')
       setTimeout(() => {
         window.location.reload();
       }, 1000);
     })
     .catch((error) => {
-      Alert.error('Error Request')
+      toast.error('Error Request')
     })
   }
 
